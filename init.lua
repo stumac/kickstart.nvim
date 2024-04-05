@@ -736,52 +736,6 @@ require('lazy').setup({
       }
     end,
   },
-
-  { -- You can easily change to a different colorscheme.
-    -- Change the name of the colorscheme plugin below, and then
-    -- change the command in the config to whatever the name of that colorscheme is.
-    --
-    -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-    'folke/tokyonight.nvim',
-    priority = 1000, -- Make sure to load this before all the other start plugins.
-    init = function()
-      -- Load the colorscheme here.
-      -- Like many other themes, this one has different styles, and you could load
-      -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      vim.cmd.colorscheme 'tokyonight-moon'
-      -- transparent backgrounds. Let wez handle your stuff
-
-      vim.api.nvim_set_hl(0, 'Normal', { fg = 'none', bg = 'none', blend = 0 })
-      vim.api.nvim_set_hl(0, 'NormalFloat', { bg = '#1b223b', blend = 50 })
-      vim.api.nvim_set_hl(0, 'TelescopeNormal', { bg = '#1b223b', blend = 5 })
-      vim.api.nvim_set_hl(0, 'NormalNC', { bg = 'none', blend = 100 })
-
-      -- You can configure highlights by doing something like:
-      --vim.cmd.hi 'LineNr gui=none'
-      vim.api.nvim_set_hl(0, 'CursorLineSign', {
-        bg = 'none',
-        fg = 'none',
-        blend = 80,
-      })
-      vim.api.nvim_set_hl(0, 'CursorLineNr', {
-        bg = '#1b223b',
-        blend = 80,
-      })
-      vim.api.nvim_set_hl(0, 'SignColumn', {
-        bg = 'none',
-        blend = 100,
-      })
-
-      vim.api.nvim_set_hl(0, 'CursorLine', {
-        bg = '#1b223b',
-        --fg = '#00FF00',
-        --blend = 50,
-      })
-      --vim.cmd.hi 'CursorLineNr gui=none'
-      vim.cmd.hi 'Comment gui=none'
-    end,
-  },
-
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
 
