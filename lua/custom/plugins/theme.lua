@@ -20,6 +20,7 @@ local plugin = {
         dark = 'mocha',
         light = 'frappe',
       },
+      transparent_background = true,
       integrations = {
         mini = {
           enabled = true,
