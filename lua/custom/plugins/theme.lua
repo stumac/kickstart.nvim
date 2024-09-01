@@ -33,13 +33,13 @@ local plugin = {
     vim.cmd.colorscheme 'catppuccin'
     -- transparent backgrounds. Let wez handle your stuff
 
-    -- vim.api.nvim_set_hl(0, 'Normal', { fg = 'none', bg = 'none', blend = 0 })
-    -- vim.api.nvim_set_hl(0, 'NormalFloat', { bg = '#1b223b', blend = 50 })
+    vim.api.nvim_set_hl(0, 'Normal', { fg = 'none', bg = 'none', blend = 0 })
+    vim.api.nvim_set_hl(0, 'NormalFloat', { bg = '#1b223b', blend = 50 })
     vim.api.nvim_set_hl(0, 'TelescopeNormal', { bg = '#1b223b', blend = 10 })
-    --    vim.api.nvim_set_hl(0, 'NormalNC', { bg = 'none', blend = 50 })
+    vim.api.nvim_set_hl(0, 'NormalNC', { bg = 'none', blend = 50 })
 
     -- You can configure highlights by doing something like:
-    --vim.cmd.hi 'LineNr gui=none'
+    vim.cmd.hi 'LineNr gui=none'
     vim.api.nvim_set_hl(0, 'CursorLineSign', {
       bg = 'none',
       fg = 'none',
@@ -47,19 +47,20 @@ local plugin = {
     })
     vim.api.nvim_set_hl(0, 'CursorLineNr', {
       bg = '#1b223b',
+      fg = '#9b009b',
       blend = 80,
     })
     vim.api.nvim_set_hl(0, 'SignColumn', {
       bg = 'none',
       blend = 100,
     })
-
+    --
     vim.api.nvim_set_hl(0, 'CursorLine', {
       bg = '#1b223b',
-      --fg = '#00FF00',
-      --blend = 50,
+      -- fg = '#00FF00',
+      -- blend = 50,
     })
-    --vim.cmd.hi 'CursorLineNr gui=none'
+    vim.cmd.hi 'CursorLineNr gui=none'
     vim.cmd.hi 'Comment gui=none'
   end,
 }

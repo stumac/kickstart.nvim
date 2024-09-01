@@ -549,6 +549,13 @@ require('lazy').setup({
         ruff = {},
         black = {},
         debugpy = {},
+        --gleam = {
+        -- cmd = { 'gleam', 'lsp' },
+        -- filetypes = { 'gleam' },
+        -- root_dir = require('lspconfig').util.root_pattern('gleam.toml', '.git'),
+        --on_attach = on_attach,
+        --capabilities = require('user.lsp.handlers').capabilities,
+        --},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
@@ -590,7 +597,7 @@ require('lazy').setup({
         'stylua', -- Used to format Lua code
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
-
+      -- wait, LSP for gleam here?
       require('mason-lspconfig').setup {
         handlers = {
           function(server_name)
@@ -848,5 +855,6 @@ require('lazy').setup({
   },
 })
 
+require('lspconfig').gleam.setup {}
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
