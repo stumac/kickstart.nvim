@@ -8,7 +8,15 @@ local plugin = {
     -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
   },
   config = function()
-    require('neo-tree').setup()
+    require('neo-tree').setup {
+      filesystem = {
+        filtered_items = {
+          visible = true,
+          hide_dotfiles = false,
+          hide_gitignored = false,
+        },
+      },
+    }
   end,
   keys = {
     { '<leader>ft', '<cmd>Neotree toggle<cr>', desc = 'NeoTree toggle' },

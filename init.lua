@@ -401,6 +401,11 @@ require('lazy').setup({
         defaults = {
           winblend = 40,
         },
+        pickers = {
+          find_files = {
+            hidden = true,
+          },
+        },
         -- You can put your default mappings / updates / etc. in here
         --  All the info you're looking for is in `:help telescope.setup()`
         --
@@ -602,6 +607,18 @@ require('lazy').setup({
         ruff = {},
         black = {},
         debugpy = {},
+        solargraph = {
+          diagnostics = false,
+          autoformat = false,
+          formatting = false,
+        },
+        -- ['ruby-lsp'] = {
+        --   init_options = {
+        --     formatter = 'none',
+        --     linters = {},
+        --   },
+        -- },
+
         --gleam = {
         -- cmd = { 'gleam', 'lsp' },
         -- filetypes = { 'gleam' },
