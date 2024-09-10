@@ -35,7 +35,24 @@ return {
       automatic_installation = true,
       -- You can provide additional configuration to the handlers,
       -- see mason-nvim-dap README for more information
-      handlers = {},
+      handlers = {
+        function(config)
+          print 'EMPTY HANDLER'
+          require('mason-nvim-dap').default_setup(config)
+        end,
+        rdbg = function(config)
+          print 'RDBG HANDLER '
+          config.adapters = {
+            type = 'server',
+            host = '${host}',
+            port = '${port}',
+            executable = {
+              command = 'bundle',
+              args = { 'exec', 'rdbg', '-n', '--open', '--port', '${port}', '-c', '--', 'bundle', 'exec', config.command, config.script },
+            },
+          }
+        end,
+      },
 
       -- You'll need to check that you have the required things installed
       -- online, please don't ask me how to install them :)
