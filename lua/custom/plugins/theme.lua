@@ -34,10 +34,10 @@ local plugin = {
     -- transparent backgrounds. Let wez handle your stuff
 
     vim.api.nvim_set_hl(0, 'Normal', { fg = 'none', bg = 'none', blend = 0 })
-    vim.api.nvim_set_hl(0, 'NormalFloat', { bg = '#1b223b', blend = 50 })
+    vim.api.nvim_set_hl(0, 'NormalFloat', { bg = '#1b223b', blend = 0 })
     vim.api.nvim_set_hl(0, 'TelescopeNormal', { bg = '#1b223b', blend = 10 })
     vim.api.nvim_set_hl(0, 'NormalNC', { bg = 'none', blend = 50 })
-
+    vim.api.nvim_set_hl(0, 'TelescopeBorder', { bg = '#1b223b', blend = 10 })
     -- You can configure highlights by doing something like:
     vim.cmd.hi 'LineNr gui=none'
     vim.api.nvim_set_hl(0, 'CursorLineSign', {
