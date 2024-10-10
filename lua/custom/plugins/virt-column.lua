@@ -4,6 +4,9 @@ local plugin = {
     char = { '│', '┃' },
     virtcolumn = '80, 120',
     highlight = { 'DiagnosticFloatingWarn', 'DiagnosticFloatingError' },
+    exclude = {
+      filetypes = { 'netrw' },
+    },
   },
 }
 
